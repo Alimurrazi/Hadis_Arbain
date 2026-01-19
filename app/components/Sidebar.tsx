@@ -9,10 +9,8 @@ interface SidebarProps {
 export function Sidebar({ pages, currentPage, onPageChange }: SidebarProps) {
   return (
     <aside className="w-64 bg-teal-900/40 backdrop-blur-sm border-r-2 border-teal-700/50 overflow-y-auto">
+      
       <div className="p-4">
-        <h2 className="text-lg text-teal-50 mb-4 pb-2 border-b border-teal-600" style={{ fontFamily: 'Cinzel, serif' }}>
-          Pages
-        </h2>
 
         <div className="space-y-2">
           {pages.map((page, index) => (

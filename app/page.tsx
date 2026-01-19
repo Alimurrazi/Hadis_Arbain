@@ -90,7 +90,7 @@ export default function Home() {
         </main>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
 
       {/* About Modal */}
       <AboutModal isOpen={isAboutModalOpen} onClose={() => setIsAboutModalOpen(false)} />
