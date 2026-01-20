@@ -8,8 +8,8 @@ interface SidebarProps {
 
 export function Sidebar({ pages, currentPage, onPageChange }: SidebarProps) {
   return (
-    <aside className="w-64 bg-teal-900/40 backdrop-blur-sm border-r-2 border-teal-700/50 overflow-y-auto">
-      
+    <aside className="w-64 bg-gray-50 border-r-2 border-gray-200 overflow-y-auto shadow-sm">
+
       <div className="p-4">
 
         <div className="space-y-2">
@@ -19,14 +19,14 @@ export function Sidebar({ pages, currentPage, onPageChange }: SidebarProps) {
               onClick={() => onPageChange(index)}
               className={`w-full text-left p-3 rounded-lg transition-all duration-300 border-2 ${
                 currentPage === index
-                  ? 'bg-teal-700/60 border-emerald-500 shadow-lg scale-105'
-                  : 'bg-teal-800/30 border-teal-800/50 hover:bg-teal-800/50 hover:border-teal-700'
+                  ? 'bg-emerald-100 border-emerald-600 shadow-lg scale-105'
+                  : 'bg-white border-gray-200 hover:bg-gray-100 hover:border-emerald-300'
               }`}
             >
               <div className="flex items-start gap-2">
                 <div
-                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm ${
-                    currentPage === index ? 'bg-emerald-500 text-emerald-950' : 'bg-teal-800 text-teal-200'
+                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+                    currentPage === index ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-700'
                   }`}
                   style={{ fontFamily: 'Cinzel, serif' }}
                 >
@@ -35,8 +35,8 @@ export function Sidebar({ pages, currentPage, onPageChange }: SidebarProps) {
 
                 <div className="flex-1 min-w-0">
                   <h3
-                    className={`text-xs mb-1 ${
-                      currentPage === index ? 'text-teal-50' : 'text-teal-100'
+                    className={`text-xs mb-1 font-medium ${
+                      currentPage === index ? 'text-emerald-900' : 'text-gray-700'
                     }`}
                     style={{ fontFamily: 'Cinzel, serif' }}
                   >

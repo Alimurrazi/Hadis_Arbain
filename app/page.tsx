@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="size-full flex flex-col bg-gradient-to-br from-teal-950 via-emerald-950 to-cyan-950">
+    <div className="size-full flex flex-col bg-white">
       <Header />
 
       <div className="flex-1 flex overflow-hidden">
