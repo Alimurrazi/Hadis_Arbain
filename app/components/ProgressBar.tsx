@@ -17,7 +17,7 @@ export function ProgressBar({ completed, total }: ProgressBarProps) {
           </h3>
         </div>
         <div className="text-right">
-          <span className="text-lg text-blue-600" style={{ fontFamily: 'Cinzel, serif' }}>
+          <span className="text-lg text-emerald-600" style={{ fontFamily: 'Cinzel, serif' }}>
             {completed} / {total}
           </span>
           <span className="text-xs text-gray-600 ml-2" style={{ fontFamily: 'Amiri, serif' }}>
@@ -45,7 +45,7 @@ export function ProgressBar({ completed, total }: ProgressBarProps) {
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="relative h-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 shadow-lg"
+          className="relative h-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-400 shadow-lg"
         >
           {/* Shine effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -61,8 +61,8 @@ export function ProgressBar({ completed, total }: ProgressBarProps) {
       <div className="flex justify-between mt-1 px-0.5">
         {[0, 25, 50, 75, 100].map((milestone) => (
           <div key={milestone} className="flex flex-col items-center">
-            <div className={`w-0.5 h-1.5 ${percentage >= milestone ? 'bg-blue-400' : 'bg-gray-300'}`}></div>
-            <span className={`text-[10px] mt-0.5 ${percentage >= milestone ? 'text-blue-600' : 'text-gray-500'}`} style={{ fontFamily: 'Amiri, serif' }}>
+            <div className={`w-0.5 h-1.5 ${percentage >= milestone ? 'bg-emerald-400' : 'bg-gray-300'}`}></div>
+            <span className={`text-[10px] mt-0.5 ${percentage >= milestone ? 'text-emerald-600' : 'text-gray-500'}`} style={{ fontFamily: 'Amiri, serif' }}>
               {milestone}%
             </span>
           </div>

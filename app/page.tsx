@@ -3,10 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { QuoteDisplay } from './components/QuoteDisplay';
-import { IslamicPattern } from './components/IslamicPattern';
 import { AboutModal } from './components/AboutModal';
 import { quotePages } from './data/quotes';
 import { ProgressBar } from './components/ProgressBar';
@@ -14,11 +12,17 @@ import { ProgressBar } from './components/ProgressBar';
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
-    const [completedPages, setCompletedPages] = useState<Set<number>>(() => {
-    // Load completed pages from localStorage
-    const saved = localStorage.getItem('islamicWisdomCompleted');
-    return saved ? new Set(JSON.parse(saved)) : new Set();
-  });
+
+  const [completedPages, setCompletedPages] = useState(new Set<number>());
+
+useEffect(() => {
+  const saved = localStorage.getItem('islamicWisdomCompleted');
+  if (saved) {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCompletedPages(new Set(JSON.parse(saved)));
+  }
+}, []);
+
   const page = quotePages[currentPage];
 
     // Save completed pages to localStorage whenever it changes

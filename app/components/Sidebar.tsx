@@ -55,8 +55,8 @@ export function Sidebar({ pages, currentPage, onPageChange, completedPages, onTo
     }}
     className={`absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded border-2 flex items-center justify-center transition-all duration-300 ${
       completedPages.has(index)
-        ? 'bg-blue-500 border-blue-400 shadow-lg'
-        : 'bg-white border-gray-300 hover:border-blue-400'
+        ? 'bg-emerald-500 border-emerald-400 shadow-lg'
+        : 'bg-white border-gray-300 hover:border-emerald-400'
     }`}
     title={completedPages.has(index) ? 'Mark as unread' : 'Mark as completed'}
   >
